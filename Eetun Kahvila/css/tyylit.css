@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f3ef;
+  color: #3e2723;
+  line-height: 1.6;
+}
+
+/* HEADER JA NAVIGAATIO */
+header {
+  background-color: #110503;
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+header p {
+  color: #d7ccc8;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background-color: #6d4c41;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #d84315;
+}
+
+nav a.active {
+  background-color: #ffffff;
+  color: #4e342e;
+}
+
+/* SISÄLTÖ */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: #4e342e;
+  border-bottom: 2px solid #d7ccc8;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+/* KORTIT (Flexbox) */
+.kortti-alue {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.kortti {
+  background-color: #9b632c;
+  color: #ffffff;
+  border: 1px solid #d7ccc8;
+  border-radius: 6px;
+  padding: 20px;
+  flex: 1;
+  min-width: 200px;
+  transition: transform 0.2s ease;
+}
+
+.kortti:hover {
+  transform: translateY(-5px);
+}
+
+.kortti h3 {
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.kortti .hinta {
+  font-weight: bold;
+  color: #ffe0b2;
+  margin-bottom: 10px;
+}
+
+/* TAULUKKO */
+.taulukko-kearyt {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: #4e342e;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fcf8f5;
+}
+
+tbody tr:hover {
+  background-color: #f5ebe6;
+}
+
+/* LOMAKE */
+.yhteys-lomake {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lomake-ryhma {
+  display: flex;
+  flex-direction: column;
+}
+
+.lomake-ryhma label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #4e342e;
+}
+
+.lomake-ryhma input,
+.lomake-ryhma textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.laheta-nappi {
+  background-color: #110503;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.laheta-nappi:hover {
+  background-color: #d84315;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #795548;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIIVISUUS */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .kortti-alue {
+    flex-direction: column;
+  }
+}
