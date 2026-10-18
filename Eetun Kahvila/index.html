@@ -1,3 +1,4 @@
+html
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -13,7 +14,7 @@
     <p>Rentouttavaa juomaa ja syötävää</p>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Etusivu</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Etusivu</a></li>
         <li><a href="tuotteet.html">Tuotteet</a></li>
         <li><a href="yhteystiedot.html">Ota yhteyttä</a></li>
       </ul>
@@ -22,23 +23,23 @@
 
   <main>
     <section>
-      <h2>Viikon 38 suosikit </h2>
+      <h2>Viikon 43 suosikit</h2>
       <div class="kortti-alue">
         <article class="kortti">
           <h3>Kahvi</h3>
-          <p class="hinta">2,00 €</p>
+          <p class="hinta">alk. 1,00 €</p>
           <p>Tuorerouhittua arabiakahvia</p>
         </article>
 
         <article class="kortti">
           <h3>Tee</h3>
-          <p class="hinta">2,00 €</p>
+          <p class="hinta">alk. 2,00 €</p>
           <p>Vihreää ja mustaa teetä kylmänä sekä kuumana</p>
         </article>
 
         <article class="kortti">
           <h3>Dallaspulla</h3>
-          <p class="hinta">3,00 €</p>
+          <p class="hinta">4,00 €</p>
           <p>Eetun pienin kätösin itseleivottua dallasta.</p>
         </article>
       </div>
@@ -46,8 +47,17 @@
 
     <section>
       <h2>Aukioloajat</h2>
-      <p>Maanantai - Perjantai: 10.00 - 17.00</p>
-      <p>Lauantai - Sunnuntai: Avoinna sopimuksen mukaan</p>
+      <div class="aukiolo-alue">
+        <article class="kortti">
+          <h3>Maanantai - Perjantai</h3>
+          <p>10.00 - 17.00</p>
+        </article>
+
+        <article class="kortti">
+          <h3>Lauantai - Sunnuntai</h3>
+          <p>Avoinna sopimuksen mukaan</p>
+        </article>
+      </div>
     </section>
   </main>
 
