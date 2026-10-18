@@ -15,7 +15,7 @@
       <ul>
         <li><a href="index.html">Etusivu</a></li>
         <li><a href="tuotteet.html">Tuotteet</a></li>
-        <li><a href="yhteystiedot.html" class="active">Ota yhteyttä</a></li>
+        <li><a href="yhteystiedot.html" class="active" aria-current="page">Ota yhteyttä</a></li>
       </ul>
     </nav>
   </header>
@@ -23,8 +23,8 @@
   <main>
     <section>
       <h2>Hei! Ota minuun yhteyttä tai anna palautetta kahvilasta!</h2>
-      </p>Kaikki parannus ideat ja kehitykset tänne vain!
-       <p
+      <p>Kaikki parannusideat ja kehitysehdotukset tänne vain!</p>
+
       <form class="yhteys-lomake">
         <div class="lomake-ryhma">
           <label for="nimi">Nimi:</label>
@@ -33,19 +33,15 @@
 
         <div class="lomake-ryhma">
           <label for="sposti">Sähköposti:</label>
-          <input type="email" id="sposti" name="sposti" placeholder="esimerkki@sähköposti.fi" required>
+          <input type="email" id="sposti" name="sposti" placeholder="esimerkki@sahkoposti.fi" required>
         </div>
+
         <div class="lomake-ryhma">
           <label for="viesti">Viesti:</label>
           <textarea id="viesti" name="viesti" rows="5" placeholder="Kirjoita viestisi tähän..." required></textarea>
         </div>
 
         <button type="submit" class="laheta-nappi">Lähetä viesti</button>
-      </form>
-    </section>
-  </main>
-
-
       </form>
     </section>
   </main>

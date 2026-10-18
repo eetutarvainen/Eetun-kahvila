@@ -9,9 +9,15 @@ body {
   background-color: #f7f3ef;
   color: #3e2723;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* HEADER JA NAVIGAATIO */
+p {
+  margin-bottom: 10px;
+}
+
 header {
   background-color: #110503;
   color: #ffffff;
@@ -53,13 +59,19 @@ nav a:hover {
   background-color: #d84315;
 }
 
+nav a:focus-visible {
+  outline: 2px solid #d84315;
+  outline-offset: 2px;
+}
+
 nav a.active {
   background-color: #ffffff;
   color: #4e342e;
 }
 
-/* SISÄLTÖ */
 main {
+  flex: 1;
+  width: 100%;
   max-width: 900px;
   margin: 30px auto;
   padding: 0 20px;
@@ -80,7 +92,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* KORTIT (Flexbox) */
 .kortti-alue {
   display: flex;
   gap: 20px;
@@ -88,7 +99,7 @@ h2 {
 }
 
 .kortti {
-  background-color: #9b632c;
+  background-color: #7a4a1f;
   color: #ffffff;
   border: 1px solid #d7ccc8;
   border-radius: 6px;
@@ -107,14 +118,30 @@ h2 {
   margin-bottom: 5px;
 }
 
+.kortti p:last-child {
+  margin-bottom: 0;
+}
+
 .kortti .hinta {
   font-weight: bold;
   color: #ffe0b2;
   margin-bottom: 10px;
 }
 
-/* TAULUKKO */
-.taulukko-kearyt {
+.tuoteryhmat {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.aukiolo-alue {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.taulukko-kaaro {
   overflow-x: auto;
 }
 
@@ -143,7 +170,6 @@ tbody tr:hover {
   background-color: #f5ebe6;
 }
 
-/* LOMAKE */
 .yhteys-lomake {
   display: flex;
   flex-direction: column;
@@ -167,6 +193,7 @@ tbody tr:hover {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  font-family: inherit;
 }
 
 .laheta-nappi {
@@ -185,7 +212,6 @@ tbody tr:hover {
   background-color: #d84315;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -193,14 +219,10 @@ footer {
   font-size: 0.9rem;
 }
 
-/* RESPONSIIVISUUS */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
+    align-items: center;
     gap: 8px;
-  }
-  
-  .kortti-alue {
-    flex-direction: column;
   }
 }
