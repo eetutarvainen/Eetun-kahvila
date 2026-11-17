@@ -1,81 +1,129 @@
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eetun Kahvilan koko valikoima ja hinnasto: kahvit, teet, pullat ja jumbopatongit.">
   <title>Eetun Kahvila - Tuotteet</title>
   <link rel="stylesheet" href="css/tyylit.css">
 </head>
-<body>
 
-  <header>
-    <h1>Eetun Kahvila</h1>
-    <p>Rentouttavaa juomaa ja syötävää</p>
-    <nav>
-      <ul>
-        <li><a href="index.html">Etusivu</a></li>
-        <li><a href="tuotteet.html" class="active" aria-current="page">Tuotteet</a></li>
-        <li><a href="yhteystiedot.html">Ota yhteyttä</a></li>
-      </ul>
-    </nav>
+<body>
+  <a class="skip-link" href="#main-content">Siirry pääsisältöön</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">EK</span>
+        <span>
+          <strong>Eetun Kahvila</strong>
+          <small>Rentouttavaa juomaa ja syötävää</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Päävalikko">
+        <ul>
+          <li><a href="index.html">Etusivu</a></li>
+          <li><a href="tuotteet.html" class="active" aria-current="page">Tuotteet</a></li>
+          <li><a href="yhteystiedot.html">Ota yhteyttä</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Koko valikoima ja hinnasto</h2>
+  <main id="main-content">
 
-      <figure class="kuva">
-        <img src="images/kahvila.jpg" alt="Kahvikuppi ja kuppilautanen pöydällä kahvilan lämpöseessä valaistuksessa" width="800" height="800">
+    <section class="page-intro">
+      <p class="eyebrow">Valikoima</p>
+      <h1>Koko valikoima ja hinnasto</h1>
+
+      <figure class="wide-image">
+        <img src="images/kahvila.jpg"
+             alt="Kahvikuppi ja kuppilautanen pöydällä kahvilan lämpimässä valaistuksessa"
+             width="800" height="800">
         <figcaption>Rauhallinen lähiökahvila Savon muaalla odottaa just sua!</figcaption>
       </figure>
+    </section>
 
-      <div class="tuoteryhmat">
-        <article class="kortti">
-          <h3>Juomat</h3>
-          <p>Kahvit ja teet</p>
-        </article>
-        <article class="kortti">
-          <h3>Pullat</h3>
-          <p>Korvapuustit ja dallaspullat</p>
-        </article>
-        <article class="kortti">
-          <h3>Suolaiset</h3>
-          <p>Jumbopatongit</p>
-        </article>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Valikoimamme</p>
+        <h2>Tuoteryhmät</h2>
       </div>
 
-      <div class="taulukko-kaaro">
+      <div class="grid">
+        <article class="card">
+          <div class="card-icon">☕</div>
+          <div class="card-body">
+            <h3>Juomat</h3>
+            <p>Kahvit ja teet</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🥐</div>
+          <div class="card-body">
+            <h3>Pullat</h3>
+            <p>Korvapuustit ja dallaspullat</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🥖</div>
+          <div class="card-body">
+            <h3>Suolaiset</h3>
+            <p>Jumbopatongit</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Hinnasto</p>
+        <h2>Hinnasto</h2>
+      </div>
+
+      <div class="table-wrap">
         <table>
+          <caption>Eetun Kahvilan tuotteet ja hinnat</caption>
+
           <thead>
             <tr>
-              <th>Tuote</th>
-              <th>Koko / Kuvaus</th>
-              <th>Hinta</th>
+              <th scope="col">Tuote</th>
+              <th scope="col">Koko / kuvaus</th>
+              <th scope="col">Hinta</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
-              <td>Kahvi (tumma/vaalea)</td>
+              <th scope="row">Kahvi (tumma/vaalea)</th>
               <td>Iso tai pieni</td>
               <td>Iso 1,50 € / Pieni 1,00 €</td>
             </tr>
+
             <tr>
-              <td>Erikoiskahvi (Cappuccino / Latte)</td>
+              <th scope="row">Erikoiskahvi (Cappuccino / Latte)</th>
               <td>Iso tai pieni</td>
               <td>Iso 3,50 € / Pieni 1,50 €</td>
             </tr>
+
             <tr>
-              <td>Kylmä tai kuuma tee</td>
+              <th scope="row">Kylmä tai kuuma tee</th>
               <td>Iso tai pieni</td>
               <td>Iso 4,00 € / Pieni 2,00 €</td>
             </tr>
+
             <tr>
-              <td>Pullat</td>
+              <th scope="row">Pullat</th>
               <td>Korvapuusti tai dallaspulla</td>
               <td>Korvapuusti 3,00 € / Dallaspulla 4,00 €</td>
             </tr>
+
             <tr>
-              <td>Jumbopatonki</td>
+              <th scope="row">Jumbopatonki</th>
               <td>Kinkku, tonnikala tai vege</td>
               <td>4,50 €</td>
             </tr>
@@ -83,10 +131,35 @@
         </table>
       </div>
     </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Eetun Kahvila</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-about">
+        <a class="footer-brand" href="index.html">Eetun Kahvila</a>
+        <p>Rentouttavaa juomaa ja syötävää</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Yhteystiedot</h2>
+        <p>Kahvikatu 1<br>70100 Kuopio</p>
+        <p>
+          <a href="tel:+358441234567">044 123 4567</a><br>
+          <a href="mailto:info@eetunkahvila.fi">info@eetunkahvila.fi</a>
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Aukioloajat</h2>
+        <p>Aukioloajat: ma-pe 10.00-17.00, la-su sopimuksen mukaan</p>
+        <a class="footer-link" href="yhteystiedot.html">Ota yhteyttä</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Eetun Kahvila. Kaikki oikeudet pidätetään.</p>
+    </div>
   </footer>
 
 </body>
