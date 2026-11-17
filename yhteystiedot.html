@@ -1,53 +1,205 @@
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ota yhteyttä Eetun Kahvilaan tai anna palautetta ja kehitysehdotuksia.">
   <title>Eetun Kahvila - Ota yhteyttä</title>
   <link rel="stylesheet" href="css/tyylit.css">
+  <script src="js/lomake.js" defer></script>
 </head>
-<body>
 
-  <header>
-    <h1>Eetun Kahvila</h1>
-    <p>Rentouttavaa juomaa ja syötävää</p>
-    <nav>
-      <ul>
-        <li><a href="index.html">Etusivu</a></li>
-        <li><a href="tuotteet.html">Tuotteet</a></li>
-        <li><a href="yhteystiedot.html" class="active" aria-current="page">Ota yhteyttä</a></li>
-      </ul>
-    </nav>
+<body>
+  <a class="skip-link" href="#main-content">Siirry pääsisältöön</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">EK</span>
+        <span>
+          <strong>Eetun Kahvila</strong>
+          <small>Rentouttavaa juomaa ja syötävää</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Päävalikko">
+        <ul>
+          <li><a href="index.html">Etusivu</a></li>
+          <li><a href="tuotteet.html">Tuotteet</a></li>
+          <li><a href="yhteystiedot.html" class="active" aria-current="page">Ota yhteyttä</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Hei! Ota minuun yhteyttä tai anna palautetta kahvilasta!</h2>
+  <main id="main-content">
+
+    <section class="page-intro contact-intro">
+      <p class="eyebrow">Ota yhteyttä</p>
+      <h1>Hei! Ota minuun yhteyttä tai anna palautetta kahvilasta!</h1>
       <p>Kaikki parannusideat ja kehitysehdotukset tänne vain!</p>
-
-      <form class="yhteys-lomake">
-        <div class="lomake-ryhma">
-          <label for="nimi">Nimi:</label>
-          <input type="text" id="nimi" name="nimi" placeholder="Etunimi Sukunimi" required>
-        </div>
-
-        <div class="lomake-ryhma">
-          <label for="sposti">Sähköposti:</label>
-          <input type="email" id="sposti" name="sposti" placeholder="esimerkki@sahkoposti.fi" required>
-        </div>
-
-        <div class="lomake-ryhma">
-          <label for="viesti">Viesti:</label>
-          <textarea id="viesti" name="viesti" rows="5" placeholder="Kirjoita viestisi tähän..." required></textarea>
-        </div>
-
-        <button type="submit" class="laheta-nappi">Lähetä viesti</button>
-      </form>
     </section>
+
+    <div class="contact-layout">
+
+      <section class="contact-form-section">
+        <p class="eyebrow">Yhteydenottolomake</p>
+        <h2>Lähetä viesti</h2>
+        <p class="form-help">Tähdellä (*) merkityt kentät ovat pakollisia.</p>
+
+        <form id="yhteysLomake">
+
+          <div class="form-group">
+            <label for="nimi">Nimi *</label>
+            <input type="text" id="nimi" name="nimi"
+                   placeholder="Etunimi Sukunimi"
+                   autocomplete="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="sposti">Sähköposti *</label>
+            <input type="email" id="sposti" name="sposti"
+                   placeholder="esimerkki@sahkoposti.fi"
+                   autocomplete="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="puhelin">Puhelinnumero</label>
+            <input type="tel" id="puhelin" name="puhelin"
+                   placeholder="040 123 4567"
+                   autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="aihe">Aihe</label>
+            <select id="aihe" name="aihe">
+              <option value="palaute">Palaute</option>
+              <option value="kehitysidea">Kehitysidea</option>
+              <option value="tilaus">Tilaus tai varaus</option>
+              <option value="muu">Muu asia</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Miten haluat vastauksen?</legend>
+
+            <div class="choice">
+              <input type="radio" id="vastaus-sposti"
+                     name="vastaus" value="sahkoposti" checked>
+              <label for="vastaus-sposti">Sähköpostilla</label>
+            </div>
+
+            <div class="choice">
+              <input type="radio" id="vastaus-puhelin"
+                     name="vastaus" value="puhelin">
+              <label for="vastaus-puhelin">Puhelimitse</label>
+            </div>
+
+            <div class="choice">
+              <input type="radio" id="vastaus-ei"
+                     name="vastaus" value="ei">
+              <label for="vastaus-ei">En kaipaa vastausta</label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="viesti">Viesti *</label>
+            <textarea id="viesti" name="viesti" rows="6"
+                      placeholder="Kirjoita viestisi tähän..."
+                      required></textarea>
+          </div>
+
+          <div class="choice consent">
+            <input type="checkbox" id="suostumus"
+                   name="suostumus" required>
+            <label for="suostumus">
+              Hyväksyn, että tietojani käytetään yhteydenottoon *
+            </label>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" class="btn">Lähetä viesti!</button>
+            <button type="reset" class="btn btn-light">Tyhjennä lomake</button>
+          </div>
+
+          <p id="lomakeTila" class="form-status"
+             role="status" aria-live="polite" hidden></p>
+
+        </form>
+      </section>
+
+      <aside class="contact-details">
+        <p class="eyebrow">Löydät meidät</p>
+        <h2>Yhteystiedot</h2>
+
+        <div class="detail-item">
+          <span>⌖</span>
+          <div>
+            <h3>Osoite:</h3>
+            <p>Kahvikatu 1<br>70100 Kuopio</p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <span>☎</span>
+          <div>
+            <h3>Puhelin:</h3>
+            <p><a href="tel:+358441234567">044 123 4567</a></p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <span>✉</span>
+          <div>
+            <h3>Sähköposti:</h3>
+            <p><a href="mailto:info@eetunkahvila.fi">info@eetunkahvila.fi</a></p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <span>◷</span>
+          <div>
+            <h3>Aukioloajat:</h3>
+            <p>
+              Maanantai - Perjantai: 10.00 - 17.00<br>
+              Lauantai - Sunnuntai: sopimuksen mukaan
+            </p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Eetun Kahvila</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-about">
+        <a class="footer-brand" href="index.html">Eetun Kahvila</a>
+        <p>Rentouttavaa juomaa ja syötävää</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Yhteystiedot</h2>
+        <p>Kahvikatu 1<br>70100 Kuopio</p>
+        <p>
+          <a href="tel:+358441234567">044 123 4567</a><br>
+          <a href="mailto:info@eetunkahvila.fi">info@eetunkahvila.fi</a>
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Aukioloajat</h2>
+        <p>Aukioloajat: ma-pe 10.00-17.00, la-su sopimuksen mukaan</p>
+        <a class="footer-link" href="tuotteet.html">Tuotteet</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Eetun Kahvila. Kaikki oikeudet pidätetään.</p>
+    </div>
   </footer>
 
 </body>
