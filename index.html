@@ -1,18 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eetun Kahvila tarjoaa tuoretta kahvia, teetä ja itseleivottuja pullia. Tutustu viikon suosikkeihin ja aukioloaikoihin.">
   <title>Eetun Kahvila - Etusivu</title>
   <link rel="stylesheet" href="css/tyylit.css">
 </head>
+
 <body>
 
-  <header>
+  <a class="skip-link" href="#main-content">Siirry pääsisältöön</a>
+
+  <header class="site-header">
     <h1>Eetun Kahvila</h1>
-    <p>Rentouttavaa juomaa ja syötävää</p>
-    <nav>
+    <p class="site-tagline">Rentouttavaa juomaa ja syötävää</p>
+
+    <nav class="site-nav" aria-label="Päävalikko">
       <ul>
         <li><a href="index.html" class="active" aria-current="page">Etusivu</a></li>
         <li><a href="tuotteet.html">Tuotteet</a></li>
@@ -21,47 +26,62 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
+
     <section>
       <h2>Tervetuloa Eetun Kahvilaan</h2>
-      <div class="esittely">
+
+      <div class="intro">
         <img src="images/barista.jpg" alt="Barista kaataa vaahdotettua maitoa latteen" width="800" height="534">
-        <div class="esittely-teksti">
+
+        <div class="intro-text">
           <p>Meillä kahvi tehdään joka aamu tuoreeksi paikan piällä. Tule chillaamaan hetkeksi, nauti kupillinen jos toinenkin!</p>
           <p>Tsekkaa alla oleva video millanen meno meillä on!</p>
+
+          <div class="buttons">
+            <a class="btn" href="tuotteet.html">Tutustu tuotteisiin</a>
+            <a class="btn secondary" href="yhteystiedot.html">Ota yhteyttä</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Viikon 43 suosikit</h2>
-      <div class="kortti-alue">
-        <article class="kortti">
-          <span class="merkki">Suosikki</span>
-          <h3>Kahvi</h3>
-          <p class="hinta">alk. 1,00 €</p>
-          <p>Tuorerouhittua arabiakahvia</p>
+      <h2>Viikon 47 suosikit</h2>
+
+      <div class="grid">
+        <article class="card">
+          <span class="badge">Suosikki</span>
+          <div class="card-body">
+            <h3>Kahvi</h3>
+            <p class="hinta">alk. 1,00 €</p>
+            <p>Tuorerouhittua arabiakahvia</p>
+          </div>
         </article>
 
-        <article class="kortti">
-          <span class="merkki">Suosikki</span>
-          <h3>Tee</h3>
-          <p class="hinta">alk. 2,00 €</p>
-          <p>Vihreää ja mustaa teetä kylmänä sekä kuumana</p>
+        <article class="card">
+          <span class="badge">Suosikki</span>
+          <div class="card-body">
+            <h3>Tee</h3>
+            <p class="hinta">alk. 2,00 €</p>
+            <p>Vihreää ja mustaa teetä kylmänä sekä kuumana</p>
+          </div>
         </article>
 
-        <article class="kortti">
-          <span class="merkki">Suosikki</span>
-          <h3>Dallaspulla</h3>
-          <p class="hinta">4,00 €</p>
-          <p>Eetun pienin kätösin itseleivottua dallasta.</p>
+        <article class="card">
+          <span class="badge">Suosikki</span>
+          <div class="card-body">
+            <h3>Dallaspulla</h3>
+            <p class="hinta">4,00 €</p>
+            <p>Eetun pienin kätösin itseleivottua dallasta.</p>
+          </div>
         </article>
       </div>
     </section>
 
     <section>
       <h2>Tutustu kahvilaan</h2>
-      <video controls width="768" height="432" poster="images/video-esikatselu.jpg">
+      <video controls preload="metadata" width="768" height="432" poster="images/video-esikatselu.jpg">
         <source src="media/esittely.mp4" type="video/mp4">
         Selaimesi ei tue videota.
       </video>
@@ -69,23 +89,37 @@
 
     <section>
       <h2>Aukioloajat</h2>
-      <div class="aukiolo-alue">
-        <article class="kortti">
-          <h3>Maanantai - Perjantai</h3>
-          <p>10.00 - 17.00</p>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="card-body">
+            <h3>Maanantai - Perjantai</h3>
+            <p>10.00 - 17.00</p>
+          </div>
         </article>
 
-        <article class="kortti">
-          <h3>Lauantai - Sunnuntai</h3>
-          <p>Avoinna sopimuksen mukaan</p>
+        <article class="card">
+          <div class="card-body">
+            <h3>Lauantai - Sunnuntai</h3>
+            <p>Avoinna sopimuksen mukaan</p>
+          </div>
         </article>
       </div>
     </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Eetun Kahvila</p>
+  <footer class="site-footer">
+    <p><strong>Eetun Kahvila</strong></p>
+    <p>Esimerkkikatu 1, 70100 Kuopio</p>
+    <p>
+      Puhelin: <a href="tel:+358441234567">044 123 4567</a> ·
+      Sähköposti: <a href="mailto:info@eetunkahvila.fi">info@eetunkahvila.fi</a>
+    </p>
+    <p>Aukioloajat: ma-pe 10.00-17.00, la-su sopimuksen mukaan</p>
+    <p>&copy; 2026 Eetun Kahvila. Kaikki oikeudet pidätetään.</p>
   </footer>
 
 </body>
+
 </html>
